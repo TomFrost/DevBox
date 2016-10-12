@@ -22,7 +22,7 @@ SHELLCONF_TMP="${HOME}/.devbox_tmp"
 
 hello() {
   cat <<EOF
-This script will configure a Mac running the latest version of MacOS to run the
+This script will configure a Mac running the latest version of macOS to run the
 standard TechnologyAdvice development environment. This script strives to be
 idempotent: it will check for the end result before completing an action meant
 to enact that result. This means that while this script may, for example, install
