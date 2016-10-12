@@ -21,7 +21,7 @@ Some other software is installed to support the above. That includes:
 - [Node.js](http://nodejs.org)
 - docker-machine
 - [docker-machine-nfs](https://github.com/adlogix/docker-machine-nfs)
-- tmux (necessary to start xhyve on boot)
+- tmux (necessary to start xhyve on boot, [issue #141](https://github.com/zchee/docker-machine-driver-xhyve/issues/141))
 
 Note that all software installs are idempotent. For example, if you've already downloaded and installed the official Node.js package from their website, DevBox won't install it again from brew.
 
