@@ -22,7 +22,7 @@ SHELLCONF_TMP="${HOME}/.devbox_tmp"
 
 hello() {
   cat <<EOF
-This script will configure a Mac running the latest verssion of macOS to run the
+This script will configure a Mac running the latest version of MacOS to run the
 standard TechnologyAdvice development environment. This script strives to be
 idempotent: it will check for the end result before completing an action meant
 to enact that result. This means that while this script may, for example, install
@@ -40,7 +40,7 @@ The actions this script will take:
 - Reconfigure the docker VM to mount volumes using NFS (uses docker-machine-nfs)
 - Enable file system event streaming on the docker VM (uses fs_eventbridge)
 
-Root access may be required for some of the above. You will be promped for the
+Root access may be required for some of the above. You will be prompted for the
 password during the process if this is necessary.
 
 EOF
