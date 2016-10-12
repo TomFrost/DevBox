@@ -5,8 +5,7 @@ A minimal bootstrapper to turn a brand new Mac into a docker-based dev environme
 To get up and running without cloning the repo:
 
 ```
-curl https://raw.githubusercontent.com/TechnologyAdvice/devbox/master/install/mac_install.sh > /tmp/mac_install.sh
-sh /tmp/mac_install.sh
+sh <(curl -fsSL https://rawgit.com/TechnologyAdvice/devbox/master/install/mac_install.sh)
 ```
 
 ## Who is this for?
