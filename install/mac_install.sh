@@ -231,16 +231,11 @@ installEventBridge() {
     echoError "Failed to download FS-EventBridge installer. Is Github down?"
     exit 7
   fi
-  chmod +x $FS_SCRIPT_PATH
-  if [ "$?" -gt "1" ]; then
-    echoError "Failed to amek $FS_SCRIPT_PATH executable. Please correct and run this script again."
-    exit 8
-  fi
   echoSuccess "Done"
   echoInfo "Running FS-EventBridge installer on $1 ..."
   eval $(docker-machine env $1)
   echo #EMPTY_LINE
-  $FS_SCRIPT_PATH --noprompt
+  sh $FS_SCRIPT_PATH --noprompt
   if [ "$?" -eq "0" ]; then
     echoSuccess "FS-Eventbridge has been installed successfully"
     echo #EMPTY_LINE
