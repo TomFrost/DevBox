@@ -33,6 +33,7 @@ The actions this script will take:
 - Install Homebrew
 - Install the latest stable Node.js/NPM
 - Globally install DevLab from NPM
+- Globally install fsbridge from NPM
 - Install docker and docker-machine
 - Install xhyve and the xhyve driver for docker-machine
 - Create a docker-machine named "$MACHINE_NAME" (change this by setting the
@@ -356,6 +357,7 @@ hello $1
 checkForExec brew || installBrew
 safeInstall node
 checkForExec lab || installNPMPackage devlab
+checkForExec fsbridge || installNPMPackage fsbridge
 safeInstall docker
 safeInstall docker-machine
 safeInstall xhyve

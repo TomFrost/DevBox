@@ -14,7 +14,7 @@ DevBox was created to standardize development config at [TechnologyAdvice](http:
 ## What does it do?
 After a successful run, the Mac will have an active, super performant Docker environment. A Docker VM is installed into macOS's native hypervisor (xhyve), and the `/Users` folder is mounted on it via a local NFS share -- the fastest measured way to mount Docker volumes on a Mac. The VM is also outfitted with [FS-EventStream](https://github.com/TechnologyAdvice/fs_eventstream) to allow a client on the Mac to forward file change events into the VM. This allows applications like webpack, gulp, nodemon, and any other inotify listener to see when files change on the host. This VM will be autostarted every time the Mac is booted, with the help of a launch agent installed in `~/Library/LaunchAgents`.
 
-In addition, DevBox installs [DevLab](https://github.com/TechnologyAdvice/DevLab), a docker-compose alternative with built-in FS-EventStream support, which also exposes any container-exposed ports on localhost for the full just-like-Linux experience.
+In addition, DevBox installs [DevLab](https://github.com/TechnologyAdvice/DevLab), a docker-compose alternative with built-in FS-EventStream support, which also exposes any container-exposed ports on localhost for the full just-like-Linux experience. It also installs [fsbridge](https://github.com/TechnologyAdvice/fsbridge), a simple CLI utility for forwarding file change events, in the event that DevLab isn't being used.
 
 Some other software is installed to support the above. That includes:
 - [Homebrew](http://brew.sh)
