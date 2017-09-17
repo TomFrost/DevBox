@@ -1,7 +1,7 @@
 #!/bin/sh
 ###############################################################
 #
-# Copyright (c) 2016 TechnologyAdvice, LLC
+# Copyright (c) 2017 Tom Shawver
 # See LICENSE.txt for software license details.
 #
 # Portions taken from the fantastic docker-machine-nfs,

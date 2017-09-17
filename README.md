@@ -1,3 +1,6 @@
+**NOTICE: Due to the improved performance of Docker for Mac, DevBox is no longer maintained. Commentary referencing
+Docker for Mac performance in this file may be outdated.**
+
 # DevBox
 A minimal bootstrapper to turn a brand new Mac into a docker-based dev environment
 
@@ -12,9 +15,9 @@ sh <(curl -fsSL https://rawgit.com/TechnologyAdvice/devbox/master/install/mac_in
 DevBox was created to standardize development config at [TechnologyAdvice](http://www.technologyadvice.com), but nothing this script does is company-specific. If you're looking for a great baseline for getting started with Docker-based development on a Mac, DevBox might be a good place to start.
 
 ## What does it do?
-After a successful run, the Mac will have an active, super performant Docker environment. A Docker VM is installed into macOS's native hypervisor (xhyve), and the `/Users` folder is mounted on it via a local NFS share -- the fastest measured way to mount Docker volumes on a Mac. The VM is also outfitted with [FS-EventStream](https://github.com/TechnologyAdvice/fs_eventstream) to allow a client on the Mac to forward file change events into the VM. This allows applications like webpack, gulp, nodemon, and any other inotify listener to see when files change on the host. This VM will be autostarted every time the Mac is booted, with the help of a launch agent installed in `~/Library/LaunchAgents`.
+After a successful run, the Mac will have an active, super performant Docker environment. A Docker VM is installed into macOS's native hypervisor (xhyve), and the `/Users` folder is mounted on it via a local NFS share -- the fastest measured way to mount Docker volumes on a Mac. The VM is also outfitted with [FS-EventStream](https://github.com/TomFrost/fs_eventstream) to allow a client on the Mac to forward file change events into the VM. This allows applications like webpack, gulp, nodemon, and any other inotify listener to see when files change on the host. This VM will be autostarted every time the Mac is booted, with the help of a launch agent installed in `~/Library/LaunchAgents`.
 
-In addition, DevBox installs [DevLab](https://github.com/TechnologyAdvice/DevLab), a docker-compose alternative with built-in FS-EventStream support, which also exposes any container-exposed ports on localhost for the full just-like-Linux experience. It also installs [fsbridge](https://github.com/TechnologyAdvice/fsbridge), a simple CLI utility for forwarding file change events, in the event that DevLab isn't being used.
+In addition, DevBox installs [DevLab](https://github.com/TechnologyAdvice/DevLab), a docker-compose alternative with built-in FS-EventStream support, which also exposes any container-exposed ports on localhost for the full just-like-Linux experience. It also installs [fsbridge](https://github.com/TomFrost/fsbridge), a simple CLI utility for forwarding file change events, in the event that DevLab isn't being used.
 
 Some other software is installed to support the above. That includes:
 - [Homebrew](http://brew.sh)
@@ -35,5 +38,5 @@ DevBox is just a shell script, so feel free to fork it and modify it for your ow
 DevBox is ISC licensed. See details in LICENSE.txt.
 
 ## Credits
-DevBox was created by Tom Shawver at TechnologyAdvice in 2016.
+DevBox was originally created at [TechnologyAdvice](http://technologyadvice.com) in Nashville, TN.
 
